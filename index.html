@@ -8,5 +8,14 @@
         <section>
             Welcome to <strong>My First Azure Static Web App</strong>
         </section>
+        <section id="greeting">
+
+        </section>
+        <script>
+            let greeting = document.getElementById('greeting');
+            fetch('/api/greetings?name=Robson')
+                .then(response => response.text())
+                .then(data => greeting.innerText = data);
+        </script>
     </body>
 </html>
